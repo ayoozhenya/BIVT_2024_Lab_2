@@ -32,7 +32,7 @@ public class Program
         //program.Task_2_8(5);
         //program.Task_2_9(10);
         //program.Task_2_10(10);
-        //program.Task_2_11(10);
+        program.Task_2_11(10);
         //program.Task_2_12(10, 0);
         //program.Task_2_13(10, 5, 0);
         //program.Task_3_1();
@@ -356,14 +356,14 @@ public class Program
         // code here;
         for (int i = 1; i<=n; i++)
         {
-            bool nekrytou = true;
+            bool krytou = false;
             for (int ou = 1; ou <= 4; ou++)
             {
                 int ekz = int.Parse((Console.ReadLine()));
-                if (ekz < 4) nekrytou = false;
+                if (ekz == 2) krytou = true;
                 avg += ekz;
             }
-            if (nekrytou) answer++;
+            if (krytou) answer++;
         }
         avg = avg / n * 4;
         Console.WriteLine(answer);
